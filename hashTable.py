@@ -11,7 +11,7 @@ class hashTable:
     # n -> numero di chiavi da memorizzare nella tabella (cardinalità di K)
     # negli algoritmi, il valore NIL sarà sostituito dal valore -1 per comododità
     def __init__(self, n):
-        self.m = math.ceil((n / 0.1))
+        self.m = math.ceil((n / 0.8))
         self.T = np.full(self.m, -1)
 
     def hashFunction(self, k, i):
@@ -41,6 +41,5 @@ class hashTable:
         return -1
 
     def printHashTable(self):
-        for i in range(0, len(self.T)):
-            print("Lista n°", i)
-            print(self.T[i].printAll())
+        for i in self.T:
+            print(self.T[i])
