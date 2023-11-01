@@ -16,10 +16,8 @@ class ABR:
         x = self.root
         while x != None and k != x.key:
             if k<x.key:
-                print("visitato nodo con chiave", x.key)
                 x = x.left
             else:
-                print("visitato nodo con chiave", x.key)
                 x = x.right
         return x
 
@@ -29,10 +27,8 @@ class ABR:
         while x != None:
             y = x
             if z.key < x.key:
-                print("oltrepassato nodo con chiave", x.key)
                 x = x.left
             else:
-                print("oltrepassato nodo con chiave", x.key)
                 x = x.right
         z.p = y
         if y == None: #l'albero era vuoto, allora z fa da radice
@@ -47,6 +43,9 @@ class ABR:
         while x.left != None:
             x = x.left
         return x
+
+    #metodi di servizio e di test per il funzionamento della classe ABR. Non sono richiesti per lo svolgimento
+    #del testo dell'esercizo.
 
     def inorderTreeWalk(self,x):
         if x != None:
