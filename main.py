@@ -43,7 +43,7 @@ def traceTables(columns: list, headers: tuple, title: str):
     # clear figure for the next plot
     plt.clf()
 
-def totalTestUltimate(numTests, dimMax, numToInsert, numToSearch):
+def totalTest(numTests, dimMax, numToInsert, numToSearch):
     resultInsertLinkedListTot = []
     resultSearchLinkedListTot = []
     resultInsertABRTot = []
@@ -329,9 +329,6 @@ if __name__ == '__main__':
     numTests = 1000
     dimMax = 100
     numToInsert = numToSearch = 10
-    #testLinkedList(numTests, dimMax, numToInsert, numToSearch)
-    #testABR(numTests, dimMax, numToInsert, numToSearch)
-    #testHashTable(numTests, dimMax, numToInsert, numToSearch)
-    totalTestUltimate(numTests, dimMax, numToInsert, numToSearch)
+    totalTest(numTests, dimMax, numToInsert, numToSearch)
 
 
