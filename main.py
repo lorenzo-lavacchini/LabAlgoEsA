@@ -1,6 +1,5 @@
 #importo le librerie create
 import time
-
 from LinkedList import *
 from ABR import *
 from hashTable import *
@@ -11,6 +10,7 @@ import matplotlib.patches as mpatch
 import os
 import numpy as np
 
+#funzione che traccia le tabelle con i dati
 def traceTables(columns: list, headers: tuple, title: str):
     fig, ax = plt.subplots(figsize=(8, 10))
 
@@ -43,6 +43,7 @@ def traceTables(columns: list, headers: tuple, title: str):
     # clear figure for the next plot
     plt.clf()
 
+#funzione che esegue i test richiesti dall'esercizio
 def totalTest(numTests, dimMax, numToInsert, numToSearch):
     resultInsertLinkedListTot = []
     resultSearchLinkedListTot = []
@@ -327,8 +328,8 @@ def totalTest(numTests, dimMax, numToInsert, numToSearch):
 
 if __name__ == '__main__':
     numTests = 1000
-    dimMax = 100
-    numToInsert = numToSearch = 10
+    dimMax = 10000
+    numToInsert = numToSearch = 100 #devono essere uguali per avere un confronto corretto nei grafici
     totalTest(numTests, dimMax, numToInsert, numToSearch)
 
 

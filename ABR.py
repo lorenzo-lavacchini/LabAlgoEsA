@@ -53,14 +53,14 @@ class ABR:
             print(x.key)
             self.inorderTreeWalk(x.right)
 
-    def count_nodes(self,x):
+    def countNodes(self, x):
         # Caso base: se l'albero è vuoto (radice è None), il numero di nodi è 0.
         if x == None:
             return 0
 
         # Calcoliamo il numero di nodi nei sotto-alberi sinistro e destro.
-        left_count = self.count_nodes(x.left)
-        right_count = self.count_nodes(x.right)
+        left_count = self.countNodes(x.left)
+        right_count = self.countNodes(x.right)
 
         # Il numero totale di nodi nell'albero è la somma dei nodi nei sotto-alberi
         # sinistro e destro, più 1 (per contare il nodo corrente).
